@@ -44,7 +44,7 @@ const DeepfakeDetection = () => {
     formData.append('media', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/deepfake/detect', formData, {
+      const response = await axios.post('https://genai-w0dh.onrender.com/api/deepfake/detect', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(response.data);

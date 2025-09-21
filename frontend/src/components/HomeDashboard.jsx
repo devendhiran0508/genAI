@@ -19,7 +19,7 @@ const HomeDashboard = () => {
 
   const fetchRecentScans = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/scans');
+      const response = await axios.get('https://genai-w0dh.onrender.com/api/scans');
       setRecentScans(response.data);
     } catch (error) {
       console.error('Error fetching recent scans:', error);

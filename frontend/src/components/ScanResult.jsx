@@ -18,7 +18,7 @@ const ScanResult = () => {
   const fetchScanData = async () => {
     try {
       // In a real app, you'd fetch by ID, but for demo we'll use the latest scan
-      const response = await axios.get('http://localhost:5000/api/scans');
+      const response = await axios.get('https://genai-w0dh.onrender.com/api/scans');
       const scan = response.data.find(s => s.id === id) || response.data[0];
       setScanData(scan);
     } catch (error) {

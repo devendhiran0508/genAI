@@ -41,7 +41,7 @@ const UserReporting = () => {
     setError(null);
 
     try {
-      await axios.post('http://localhost:5000/api/reports', formData);
+      await axios.post('https://genai-w0dh.onrender.com/api/reports', formData);
       setSubmitted(true);
       setFormData({
         content: '',

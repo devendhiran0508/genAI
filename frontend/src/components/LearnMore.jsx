@@ -17,7 +17,7 @@ const LearnMore = () => {
 
   const fetchEducationalContent = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/learn');
+      const response = await axios.get('https://genai-w0dh.onrender.com/api/learn');
       setTopics(response.data.topics);
       setSelectedTopic(response.data.topics[0]);
     } catch (error) {
