@@ -31,7 +31,7 @@ const HomeDashboard = () => {
     
     setIsAnalyzing(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/analyze/text', {
+      const response = await axios.post('https://genai-w0dh.onrender.com/api/analyze/text', {
         content: textInput,
         url: urlInput
       });
@@ -56,8 +56,8 @@ const HomeDashboard = () => {
 
     try {
       const endpoint = file.type.startsWith('image/') 
-        ? 'http://localhost:5000/api/analyze/image'
-        : 'http://localhost:5000/api/analyze/video';
+        ? 'https://genai-w0dh.onrender.com/api/analyze/image'
+        : 'https://genai-w0dh.onrender.com/api/analyze/video';
       
       const response = await axios.post(endpoint, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
